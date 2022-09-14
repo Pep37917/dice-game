@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="shape1 active-bg"></div>
+            <div class="shape2"></div>
+            <h1 class="logo"><i class="fas fa-dice"></i></h1>
+            <div class="players">
+                <div id="player1">
+                    <div class="status">
+                        <h2 id="p1name">
+                            Player 1
+                        </h2>
+                        <div id="p1-active" class="active-dot">         
+                        </div>
+                    </div>
+                    <h1>
+                        <span id="player1Scoreboard">0</span>
+                    </h1>
+                    <div id="player1Dice" class="dice active">
+                        <img class="dice-img dice-img1" src="images/blank.png">
+                    </div>
+                </div>
+                <div id="player2">
+                    <div class="status">
+                        <h2 id="p2name">
+                            Player 2
+                        </h2>
+                        <div id="p2-active"></div>
+                    </div>
+                    <h1>
+                        <span id="player2Scoreboard">0</span>
+                    </h1>
+                    <div id="player2Dice" class="dice">
+                        <img class="dice-img dice-img2" src="images/blank.png">
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="rollBtn">Roll <i class="fas fa-dice-d6 dice-icon"></i></button>
+                <button id="dblBtn">Risk it for the biscuit <span class="cookie">🍪</span></button>
+                <button id="resetBtn">Reset Game 🔁</button>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+html, body { 
+    --color-1: #a8e6cf;
+    --color-2: #dcedc1; 
+    --color-3: #ffd3b6; 
+    --color-4: #ffaaa5; 
+    --color-5: #ff8b94;
+    --transition: all 0.4s ease-in-out;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 40px;
+    background: rgb(158, 145, 145);
+    font-family: 'Fredoka One', cursive;
+    height: 120vh;
+    color: black;
+}
+
+.logo {
+    font-size: 90px;
+}
+
+.container {
+    width: 700px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.container span {
+    font-size: 50px;
+}
+
+.shape1 {
+    content: "";
+    background-color: #fff;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.shape2 {
+    content: "";
+    background-color: #fff;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.players {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#player1,
+#player2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status #p1-active,
+.status #p2-active {
+    margin-left: 8px;
+}
+
+.dice {
+    border-radius: 10px;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    font-size: 80px;
+    display: block;
+    border: none;
+}
+
+.dice-img {
+    width: 100%;
+    height: 100%;
+}
+
+.animate {
+    animation: shake 0.2s;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    color: black;
+    padding: 15px 20px;
+    font-size: 30px;
+    margin: 40px auto 0 auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#p1name,
+#p2name {
+    font-size: 20px;
+}
+
+#rollBtn {
+    background: rgb(213, 212, 212);
+    transition: var(--transition);
+}
+
+.dice-icon {
+    transition: var(--transition);
+}
+
+#rollBtn:hover {
+    background: rgb(146, 144, 144);
+}
+
+#rollBtn:hover .dice-icon {
+    animation: 0.3s shake;
+    color: #f55d69;
+}
+
+#dblBtn {
+    background-color: #a8e6cf;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+#dblBtn:hover {
+    background: #2a946d;
+}
+
+#resetBtn {
+    background-color: lightcoral;
+}
+
+button:focus {
+    outline: none;
+}
+
+#resetBtn {
+    display: none;
+    transition: var(--transition);
+}
+
+#resetBtn:hover {
+    background: #901919;
+}
+
+.active-dot {
+    content: "";
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    background-color: rgb(115, 242, 115);
+}
+
+.active-bg {
+    opacity: 0.9;
+}
+
+/* dice animation */
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    25% {
+        transform: rotate(30deg)
+    }
+    
+    50% {
+        transform: rotate(0deg);
+    }
+    
+    75% {
+        transform: rotate(-30deg);
+    }
+    
+    100% {
+        transform: rotate(0deg);
+    }
+}
